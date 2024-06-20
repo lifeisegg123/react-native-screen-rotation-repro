@@ -50,6 +50,9 @@ function RePro() {
 
   useLayoutEffect(() => {
     navigation.setOptions({orientation});
+    return () => {
+      navigation.setOptions({orientation: 'default'});
+    };
   }, [navigation, orientation]);
   return (
     <View>
